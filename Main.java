@@ -5,6 +5,8 @@ public class Main
     public static void main(String[] args)
     {
         Scanner input = new Scanner(System.in);
+        Student[] students = new Student[50];
+        int count = 0;
 
         //int option;
         while(true)
@@ -16,27 +18,31 @@ public class Main
             System.out.println("4 : Sort Students by Name");
             System.out.println("5 : Quit");
 
-            int stId;
-            String stName;
+            int stuId;
+            String stuName;
             int option = input.nextInt();
 
             switch (option)
             {
                 case 1:
                     System.out.println("Enter student id :");
-                    stId = input.nextInt();  
+                    stuId = input.nextInt();  
                     input.nextLine();                 
 
                     System.out.println("Enter student name :");
-                    stName = input.nextLine();
+                    stuName = input.nextLine();
 
-                    Student student1 = new Student(stId, stName);
-                    System.out.println(student1.getName());
+                    students[count] = new Student(stuId, stuName);
+                    System.out.println(students[count].getName());
+                    count++;
 
                     break;
 
                 case 2:
-
+                    for(int i = 0; i < count; i++)
+                    {
+                            System.out.println(students[i].stId + "-" + students[i].stName + "\n");                       
+                    }
                     break;
 
                 case 3:

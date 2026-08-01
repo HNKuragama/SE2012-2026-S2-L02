@@ -1,7 +1,7 @@
 public class Student
 {
-    private  int stId;
-    private  String stName;
+    public  int stId;
+    public  String stName;
 
     public Student(int stId, String stName)
     {
@@ -12,5 +12,6 @@ public class Student
     public String getName()
     {
         return stName;
-    }
+    }    
+    
 }
