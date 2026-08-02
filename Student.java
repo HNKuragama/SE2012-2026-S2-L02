@@ -1,9 +1,9 @@
 public class Student
 {
-    public  int stId;
+    public  String stId;
     public  String stName;
 
-    public Student(int stId, String stName)
+    public Student(String stId, String stName)
     {
         this.stId = stId;
         this.stName = stName;
@@ -13,5 +13,10 @@ public class Student
     {
         return stName;
     }    
+
+    public String getId()
+    {
+        return stId;
+    }
     
 }
