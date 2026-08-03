@@ -61,29 +61,7 @@ public class Main
                     break;
 
                 case 4:
-                    for(int i = 0; i < count-1; i++)                      //Sorting students
-                    {
-                        if(students[i].getName().compareToIgnoreCase(students[i+1].getName()) > 0)
-                        {
-                            Student temp = students[i];
-                            students[i] = students[i+1];
-                            students[i+1] = temp;
-                            if((i-1) >= 0)
-                            {
-                                if(students[i-1].getName().compareToIgnoreCase(students[i].getName()) > 0)
-                                {
-                                    temp = students[i-1];
-                                    students[i-1] = students[i];
-                                    students[i] = temp;
-                                }
-                            }
-                        }
-                        
-                    }
-                    for(int i = 0; i < count; i++)
-                    {
-                        System.out.println(students[i].getId() + " - " + students[i].getName());                       
-                    }
+                    manager.SortStudents(count, students);
                     break;
 
                 case 5:
